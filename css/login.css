@@ -7,55 +7,112 @@
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-}
-
-main {
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center; /*TODO*/
-}
 /**********************************
     Estilos base: para celular
 **********************************/
 
 /*Estilos para el título principal*/
+
+/*Estilos compartidos entre las secciones*/
 #seccion-saludo, #seccion-formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-#seccion-saludo {
-    margin: 20px 0px;
-    gap: 15px;
-}
-
-section h2 {
-    color: #f14a17;
-    font-family: 'Montserrat';
-    font-size: 5rem;
-    font-weight: 800;
-}
-
-section h3, section p {
+#seccion-saludo, #seccion-formulario button, #seccion-registrarse {
     font-family: 'Poppins';
 }
 
-section h3{
+#seccion-saludo {
+    gap: 15px;
+}
+
+#seccion-saludo h2 a {
+    color: #f14a17;  
+    font-family: 'Montserrat';
+    font-size: 5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#seccion-saludo h3{
     font-size: 1.8rem;
 }
 
-section p {
+#seccion-saludo p {
     font-size: 1.2rem;
 }
 
 /*Estilos para la sección del formulario*/
-section div form {
+.form-group{
+    width: 100%;
+}
+
+.form-group input{
+    border: 2px solid hsl(0, 0%, 50%);
+}
+
+.form-group input::placeholder {
+    color: hsl(0, 0%, 60%);
+}
+
+#seccion-formulario {
+    margin: 20px 0px;
+}
+#seccion-formulario form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    margin-bottom: 15px;
+}
+
+#seccion-formulario button {
+    width: 70%;
+    background-color: #f14a17;
+    border-color: #f14a17;
+}
+
+#seccion-formulario a {
+    font-size: small;
+    color: hsl(0, 0%, 40%);
+}
+
+/*Estilos para la sección para invitar al usuario a registrarse*/
+#seccion-registrarse {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#seccion-registrarse p {
+    font-size: 0.9rem;
+}
+
+#seccion-registrarse button {
+    background-color: #f14a17;
+    border-color: #f14a17;
+}
+
+#seccion-registrarse button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 1024px) {
+    #seccion-registrarse p {
+        font-size: 1rem;
+    }
+    
+    #seccion-registrarse button a {
+        font-size: 0.9rem;
+    }
+
+    #seccion-registrarse {
+       justify-content: center;
+        gap: 50px;
+    }
 }

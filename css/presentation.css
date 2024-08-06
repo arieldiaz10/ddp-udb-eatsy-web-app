@@ -67,9 +67,10 @@ main {
 
 .contenedor-botones button:hover {
     background-color: #f14a17;
-    border: 2px solid #ffffff;
     color: #ffffff;
+    border: 2px solid #ffffff;
 }
+
 
 /*Estilos responsivos para dispositivos grandes*/
 @media (min-width: 1024px) and (max-width: 1440px){

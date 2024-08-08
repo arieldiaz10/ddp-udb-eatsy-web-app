@@ -8,64 +8,63 @@
 }
 
 body {
-    background-color: #f14a17;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
+    background-color: #f14a17; 
 }
 
 /**********************************
     Estilos base: para celular
 **********************************/
-
-/*Estilos para la etiqueta main*/
 main {
-    width: 80%;
-    height: 100vh;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 /*Estilos para la sección contenedor-info*/
-.contenedor-info {
-    margin: 50px 0px;
+#seccion-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.contenedor-info h2 {
+#seccion-info h2 {
     color: #ffffff;  
     font-family: 'Montserrat';
     font-size: 5rem;
     font-weight: 800;
 }
 
-.contenedor-info p {
+#seccion-info p {
     color: #ffffff;
-    margin: 50px 25px;
     font-family: 'Poppins';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-.contenedor-info img{
+#seccion-info img{
     width: 70%;
 }
 
 /*Estilos para la sección contenedor-botones*/
-.contenedor-botones button a{
-    text-decoration: none;
-    font-family: 'Poppins';
-    font-weight: 500;
-    color: #f14a17;
+#seccion-botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.contenedor-botones button{
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border-style: none;
+.btn-custom {
     background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 20px;
+    color: #f14a17;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Poppins';
     transition: all 0.3s ease;
 }
 
-.contenedor-botones button:hover {
+.btn-custom:hover {
     background-color: #f14a17;
     color: #ffffff;
     border: 2px solid #ffffff;
@@ -73,36 +72,36 @@ main {
 
 
 /*Estilos responsivos para dispositivos grandes*/
-@media (min-width: 1024px) and (max-width: 1440px){
-    body {
-        justify-content: center;
-    }
-
-    main {
-        width: 50%;
-        height: min-content;
-    }
-
-    .contenedor-info img{
+@media (min-width:768px) and (max-width: 1024px){
+    #seccion-info img {
         width: 50%;
     }
 
-    .contenedor-p {
-        margin: 30px;
+    #seccion-botones {
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px){
+    #seccion-info img{
+        width: 35%;
+    }
+
+    #seccion-botones {
+        gap: 50px;
     }
 }
 
 @media (min-width: 1441px) {
-    main {
-        width: 40%;
-        height: min-content;
-    }
-    .contenedor-info img{
-        width: 50%;
+    #seccion-info img{
+        width: 25%;
     }
 
-    .contenedor-botones button {
-        padding: 15px 25px;
+    #seccion-botones {
+        gap: 100px;
+    }
+
+    .btn-custom {
         font-size: 1.2rem;
     }
 }
